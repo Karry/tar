@@ -523,7 +523,7 @@ namespace tar{
 	/// \brief Write a simple tar file
 	class tar_reader{
 	public:
-		tar_reader(std::string const& filename):
+		explicit tar_reader(std::string const& filename):
 			isptr_(std::make_unique< std::ifstream >(
 				filename.c_str(), std::ios_base::in | std::ios_base::binary
 			)),
