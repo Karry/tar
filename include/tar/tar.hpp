@@ -253,14 +253,14 @@ namespace tar{
 	/// \brief Write a simple tar file
 	class tar_writer{
 	public:
-		tar_writer(std::string const& filename):
+		explicit tar_writer(std::string const& filename):
 			outfile_(new std::ofstream(
 				filename.c_str(),
 				std::ios_base::out | std::ios_base::binary
 			)),
 			out_(*outfile_) {}
 
-		tar_writer(std::ostream& out):
+		explicit tar_writer(std::ostream& out):
 			out_(out) {}
 
 		~tar_writer(){
