@@ -28,6 +28,7 @@
 #include <set>
 #include <array>
 #include <cassert>
+#include <optional>
 
 namespace tar{
 
