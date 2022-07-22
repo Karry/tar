@@ -346,11 +346,11 @@ namespace tar{
 		using type = uint8_t;
 
 		/// truncate file to its expected size when its size grow during reading
-		/// fail othervise
+		/// fail otherwise
 		constexpr type truncate_growing = (1 << 0);
 
 		/// trim missing files to zero in tar
-		/// fail othervise
+		/// fail otherwise
 		constexpr type trim_missing = (1 << 1);
 	}
 
