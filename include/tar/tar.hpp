@@ -29,6 +29,7 @@
 #include <array>
 #include <cassert>
 #include <optional>
+#include <chrono>
 
 namespace tar{
 
