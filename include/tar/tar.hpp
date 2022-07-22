@@ -521,7 +521,7 @@ namespace tar{
 	};
 
 
-	/// \brief Write a simple tar file
+	/// \brief Read a simple tar file
 	class tar_reader{
 	public:
 		explicit tar_reader(std::string const& filename):
