@@ -30,6 +30,7 @@
 #include <cassert>
 #include <optional>
 #include <chrono>
+#include <locale>
 
 namespace tar{
 
@@ -161,9 +162,10 @@ namespace tar{
 			write< field_name::checksum >(buffer, empty_checksum);
 
 			unsigned sum = 0;
-			for(unsigned i: buffer) sum += i;
+			for(unsigned i: buffer) sum += unsigned(0xff) & i;
 
 			std::ostringstream os;
+			os.imbue(std::locale("C"));
 			os << std::oct << std::setfill('0') << std::setw(6) << sum << '\0'
 				<< ' ';
 
