@@ -533,7 +533,7 @@ namespace tar{
 			init();
 		}
 
-		tar_reader(std::istream& is):
+		explicit tar_reader(std::istream& is):
 			is_(is)
 		{
 			init();
